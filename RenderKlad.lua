@@ -1,12 +1,12 @@
 local objs = {
-	[19918] = "КЛАД",
+	[19918] = "РљР›РђР”",
 }
 
 local activ = false
 local font = renderCreateFont('Impact',20,13)
 function main()
     repeat wait(0) until isSampAvailable() 
-    sampAddChatMessage('{ccff99}[RenderKlad]: {0099ff}Успешная загрузка. Для активации напишите {FF0000}/klad', -1)
+    sampAddChatMessage('{ccff99}[RenderKlad]: {0099ff}РЎРєСЂРёРїС‚ Р·Р°РіСЂСѓР¶РµРЅ. Р”Р»СЏ Р°РєС‚РёРІР°С†РёРё РЅР°РїРёС€РёС‚Рµ {FF0000}/klad', -1)
     sampRegisterChatCommand('klad',function()
         activ = not activ
         printString('klad '..(activ and '~g~enable' or '~r~disable'),1700)
@@ -25,7 +25,7 @@ function main()
                             local dist = math.floor(getDistanceBetweenCoords3d(x,y,z,x1,y1,z1))
                             local c1,c2 = convert3DCoordsToScreen(x,y,z)
                             local o1,o2 = convert3DCoordsToScreen(x1,y1,z1)
-                            local text = '{6400FF}'.._obj..'\n{C0C0C0}дистанция: '..dist..'m.'
+                            local text = '{6400FF}'.._obj..'\n{C0C0C0}РґРёСЃС‚Р°РЅС†РёСЏ: '..dist..'m.'
                             renderDrawLine(c1,c2,o1,o2,1, 0xFFD00000)
                             renderFontDrawText(font,text,o1,o2,-1)
                         end
